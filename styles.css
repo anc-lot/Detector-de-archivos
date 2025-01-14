@@ -1,0 +1,152 @@
+/* Estilo General */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #111;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Fondo animado de estilo ciberpunk */
+@keyframes pulse {
+  0% {
+    background-color: rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    background-color: rgba(0, 255, 255, 0.6);
+  }
+  100% {
+    background-color: rgba(0, 255, 255, 0.3);
+  }
+}
+
+body {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Fondo interactivo de partículas */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #111;
+}
+
+/* Contenedor principal */
+.app {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffff;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+/* Título */
+h1 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 2.5rem;
+  color: #00ffcc;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffff, 0 0 40px #00ffcc;
+  animation: glow 1.5s infinite alternate;
+  text-transform: uppercase;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffff, 0 0 40px #00ffcc;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffff, 0 0 60px #00ffcc;
+  }
+}
+
+/* Contenedor de entrada */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Estilo de los botones y entradas */
+input[type="file"],
+button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  color: #111;
+  background: linear-gradient(90deg, #00ffcc, #00ffff);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Icono de los botones */
+button i {
+  margin-right: 10px;
+}
+
+/* Hover de los botones */
+input[type="file"]:hover,
+button:hover {
+  background: linear-gradient(90deg, #00ffff, #00ffcc);
+  transform: scale(1.1);
+}
+
+/* Loader */
+.loader {
+  border: 6px solid rgba(0, 255, 255, 0.3);
+  border-top: 6px solid #00ffcc;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mensajes */
+#message {
+  font-size: 1.3rem;
+  color: #ff6666;
+  margin-top: 20px;
+}
+
+/* Información del archivo */
+#file-info {
+  font-size: 1.1rem;
+  color: white;
+  margin-top: 20px;
+}
+
+#file-info p {
+  margin: 10px 0;
+}
+
+#file-info span {
+  color: #00ffcc;
+  font-weight: bold;
+}

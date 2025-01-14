@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detector de Archivos Maliciosos</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  </head>
+  <body>
+    <div id="particles-js"></div> <!-- Fondo de partículas -->
+
+    <div class="app">
+      <h1>Detector de Archivos Maliciosos</h1>
+
+      <div class="input-container">
+        <input type="file" id="file-input" />
+        <button id="scan-btn">
+          <i class="fa fa-search"></i> Escanear
+        </button>
+      </div>
+
+      <div id="message" class="message"></div>
+      <div id="loader" class="loader" style="display: none;"></div> <!-- Loader -->
+
+      <div id="file-info">
+        <p><strong>Nombre del archivo:</strong> <span id="file-name">N/A</span></p>
+        <p><strong>Extensión:</strong> <span id="file-extension">N/A</span></p>
+        <p><strong>Hash:</strong> <span id="file-hash">N/A</span></p>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
